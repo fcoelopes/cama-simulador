@@ -1,0 +1,20 @@
+[project]
+name = "cama2-simulator"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "anthropic>=0.34.0",
+    "chromadb>=0.5.0",
+    "google-generativeai>=0.7.0",
+    "openai>=1.40.0",
+    "pypdf>=4.0.0",
+    "python-docx>=1.1.0",
+    "reportlab>=4.2.0",
+    "sentence-transformers>=3.0.0",
+    "streamlit>=1.32.0",
+    "tiktoken>=0.7.0",
+    "torch>=2.0.0",
+    "torchvision>=0.15.0",
+]
