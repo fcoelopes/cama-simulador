@@ -10,5 +10,5 @@ wheels/
 .venv
 
 # Data files
-/data/
+/data/files/
 
