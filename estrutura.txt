@@ -1,0 +1,34 @@
+.
+├── estrutura.txt
+├── .gitignore
+├── .python-version
+├── README.md
+├── app.py
+├── cache
+│   └── questions.sqlite
+├── config.py
+├── dashboard.py
+├── data
+│   └── .gitkeep
+├── db
+│   ├── 58ce4cfb-c089-4af7-ac31-f67a0b5fe247
+│   │   ├── data_level0.bin
+│   │   ├── header.bin
+│   │   ├── index_metadata.pickle
+│   │   ├── length.bin
+│   │   └── link_lists.bin
+│   ├── 9aeb4f12-b918-4bf5-9b37-0996ea73c5a1
+│   │   ├── data_level0.bin
+│   │   ├── header.bin
+│   │   ├── index_metadata.pickle
+│   │   ├── length.bin
+│   │   └── link_lists.bin
+│   └── chroma.sqlite3
+├── export.py
+├── identify_models.py
+├── ingest.py
+├── llm.py
+├── pyproject.toml
+├── quiz.py
+├── requirements.txt
+└── uv.lock

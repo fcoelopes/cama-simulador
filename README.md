@@ -64,7 +64,7 @@ Na primeira execução o `sentence-transformers` baixa o modelo (~470 MB).
 ## Customização rápida
 
 - Trocar modelo de embedding: `EMBED_MODEL` em `config.py`.
-- Mexer no chunking: `CHUNK_SIZE` / `CHUNK_OVERLAP`.
+- Alterar chunking: `CHUNK_SIZE` / `CHUNK_OVERLAP`.
 - Mais/menos contexto por questão: `TOP_K`.
 - Adicionar provider: nova classe em `llm.py` + entrada em `PROVIDERS`.
 - Cutoff de aprovação: hard-coded em 70% no `app.py` (mude o `if pct >= 70` se a CAMA mudar).

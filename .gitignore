@@ -5,10 +5,13 @@ build/
 dist/
 wheels/
 *.egg-info
+.claude/
+.ruff_cache/
 
 # Virtual environments
 .venv
 
 # Data files
 /data/files/
+
 
