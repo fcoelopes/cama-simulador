@@ -145,7 +145,14 @@ with st.sidebar:
 # ---------- corpo principal ----------
 
 st.title("📚 Simulador CAMA")
-st.caption("Certified Asset Management Assessor — questionários gerados via RAG sobre sua base de conhecimento")
+st.caption("Certified Asset Management Assessor — questionários gerados via RAG sobre sua base de conhecimento.") 
+st.caption("Disclaimer: A Certificação é obtida através da aprovação em um exame de múltipla escolha, \
+           baseado na Especificação de Competência de Auditor/Avaliador desenvolvido pelo GFMAM (ISBN978 0 9871799 3 7 GFMAM_ISO55001). \
+           Essa ferramenta foi desenvolvida com fins didáticos e não é afiliada ao GFMAM ou à certificação oficial de forma alguma. \
+           O objetivo aqui é criar um ambiente de estudo personalizado, onde você pode gerar questões baseadas no material que você tem, \
+           praticar simulados e acompanhar seu desempenho ao longo do tempo.")
+st.caption("Desenvolvido por Francisco Edson Lopes da Silva - contato@fcoelds.dev.br")
+
 
 tab_play, tab_gen, tab_dash, tab_debug = st.tabs([
     "🎯 Simulado", "✨ Gerar novas questões", "📊 Dashboard", "🔍 Debug RAG",
@@ -445,29 +452,29 @@ with tab_play:
                             st.rerun()
 
                 # export antes de finalizar (versão "prova em branco")
-                with st.expander("📥 Exportar prova (sem gabarito)"):
-                    md_blank = to_markdown(qs, answers=None, include_answers=False,
-                                            title="Simulado CAMA — Prova")
-                    pdf_blank = to_pdf(qs, answers=None, include_answers=False,
-                                       title="Simulado CAMA — Prova")
-                    ts = datetime.now().strftime("%Y%m%d_%H%M")
-                    c1, c2 = st.columns(2)
-                    with c1:
-                        st.download_button(
-                            "⬇️ PDF",
-                            data=pdf_blank, #pdf_blank
-                            file_name=f"simulado_{ts}.pdf",
-                            mime="application/pdf",
-                            use_container_width=True,
-                        )
-                    with c2:
-                       st.download_button(
-                           "⬇️ Markdown",
-                           data=md_blank,
-                           file_name=f"simulado_{ts}.md",
-                           mime="text/markdown",
-                           use_container_width=True,
-                      )
+                # with st.expander("📥 Exportar prova (sem gabarito)"):
+                #     md_blank = to_markdown(qs, answers=None, include_answers=False,
+                #                             title="Simulado CAMA — Prova")
+                #     pdf_blank = to_pdf(qs, answers=None, include_answers=False,
+                #                        title="Simulado CAMA — Prova")
+                #     ts = datetime.now().strftime("%Y%m%d_%H%M")
+                #     c1, c2 = st.columns(2)
+                #     with c1:
+                #         st.download_button(
+                #             "⬇️ PDF",
+                #             data=pdf_blank, #pdf_blank
+                #             file_name=f"simulado_{ts}.pdf",
+                #             mime="application/pdf",
+                #             use_container_width=True,
+                #         )
+                #     with c2:
+                #        st.download_button(
+                #            "⬇️ Markdown",
+                #            data=md_blank,
+                #            file_name=f"simulado_{ts}.md",
+                #            mime="text/markdown",
+                #            use_container_width=True,
+                #       )
 
             else:
                 # ---- modo resultado ----
